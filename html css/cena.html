@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Malowanie pokoi i biur</h1>
+    </header>
+    <section id="left">
+        <h2>Menu</h2>
+        <ul>
+            <a href="mieszamy.html"><li>Mieszamy</li></a>
+            <a href="cena.html"><li>Wyceniamy</li></a>
+        </ul>
+    </section>
+    <section id="mid">
+        <h2>Zapotrzebowanie na farbę</h2>
+        Powierzchnia malowania (m<sup>2</sup>): <input type="number" name="" id="powierzchnia">
+        <button onclick="skrypt()">Policz</button>
+        <p id="wynik"></p>
+    </section>
+    <section id="right">
+        <img src="obraz.png" alt="Próbki farb">
+    </section>
+    <section>
+        <footer>
+            <h3>Malarz</h3>
+            <p>Stronę opracował: Mateusz Piątkowski</p>
+        </footer>
+        <script>
+            function skrypt(){
+                var powierzchnia = document.getElementById("powierzchnia").value;
+                var wynik = document.getElementById("wynik")
+                wynik.innerHTML = "Liczba jednolitrowych puszek farby potrzebnych do pomalowania wynosi: " + Math.ceil(powierzchnia / 4);
+            }
+        </script>
+    </section>
+</body>
+</html>
